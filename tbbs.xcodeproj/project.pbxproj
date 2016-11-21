@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		388D72A71D57F3AE00D8DE77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */; };
 		388D72A91D57F3AE00D8DE77 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72A81D57F3AE00D8DE77 /* GameViewController.swift */; };
-		388D72AB1D57F3AE00D8DE77 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 388D72AA1D57F3AE00D8DE77 /* Shaders.metal */; };
-		388D72AE1D57F3AE00D8DE77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388D72AC1D57F3AE00D8DE77 /* Main.storyboard */; };
 		388D72B01D57F3AE00D8DE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388D72AF1D57F3AE00D8DE77 /* Assets.xcassets */; };
 		388D72B31D57F3AE00D8DE77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388D72B11D57F3AE00D8DE77 /* LaunchScreen.storyboard */; };
 		388D72BE1D57F3AE00D8DE77 /* tbbsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72BD1D57F3AE00D8DE77 /* tbbsTests.swift */; };
 		388D72C91D57F3AE00D8DE77 /* tbbsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72C81D57F3AE00D8DE77 /* tbbsUITests.swift */; };
+		388D72D71D57FE4C00D8DE77 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D61D57FE4C00D8DE77 /* Monster.swift */; };
+		388D72D81D57FE4C00D8DE77 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D61D57FE4C00D8DE77 /* Monster.swift */; };
+		388D72DA1D57FF1100D8DE77 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D91D57FF1100D8DE77 /* Move.swift */; };
+		388D72DB1D57FF1100D8DE77 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D91D57FF1100D8DE77 /* Move.swift */; };
+		388D72DF1D58056B00D8DE77 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72DE1D58056B00D8DE77 /* Battle.swift */; };
+		388D72E01D58056B00D8DE77 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72DE1D58056B00D8DE77 /* Battle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,6 @@
 		388D72A31D57F3AE00D8DE77 /* tbbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tbbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		388D72A81D57F3AE00D8DE77 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		388D72AA1D57F3AE00D8DE77 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		388D72AD1D57F3AE00D8DE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		388D72AF1D57F3AE00D8DE77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		388D72B21D57F3AE00D8DE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		388D72B41D57F3AE00D8DE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,9 @@
 		388D72C41D57F3AE00D8DE77 /* tbbsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tbbsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		388D72C81D57F3AE00D8DE77 /* tbbsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tbbsUITests.swift; sourceTree = "<group>"; };
 		388D72CA1D57F3AE00D8DE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388D72D61D57FE4C00D8DE77 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		388D72D91D57FF1100D8DE77 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		388D72DE1D58056B00D8DE77 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +104,12 @@
 		388D72A51D57F3AE00D8DE77 /* tbbs */ = {
 			isa = PBXGroup;
 			children = (
-				388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */,
-				388D72A81D57F3AE00D8DE77 /* GameViewController.swift */,
-				388D72AA1D57F3AE00D8DE77 /* Shaders.metal */,
-				388D72AC1D57F3AE00D8DE77 /* Main.storyboard */,
+				388D72DD1D5800F500D8DE77 /* Controllers */,
+				388D72DC1D5800ED00D8DE77 /* Models */,
 				388D72AF1D57F3AE00D8DE77 /* Assets.xcassets */,
-				388D72B11D57F3AE00D8DE77 /* LaunchScreen.storyboard */,
 				388D72B41D57F3AE00D8DE77 /* Info.plist */,
+				388D72B11D57F3AE00D8DE77 /* LaunchScreen.storyboard */,
+				388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */,
 			);
 			path = tbbs;
 			sourceTree = "<group>";
@@ -126,6 +130,24 @@
 				388D72CA1D57F3AE00D8DE77 /* Info.plist */,
 			);
 			path = tbbsUITests;
+			sourceTree = "<group>";
+		};
+		388D72DC1D5800ED00D8DE77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				388D72D91D57FF1100D8DE77 /* Move.swift */,
+				388D72D61D57FE4C00D8DE77 /* Monster.swift */,
+				388D72DE1D58056B00D8DE77 /* Battle.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		388D72DD1D5800F500D8DE77 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				388D72A81D57F3AE00D8DE77 /* GameViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,18 +213,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Jim Boulter";
 				TargetAttributes = {
 					388D72A21D57F3AE00D8DE77 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 226W9978N7;
+						LastSwiftMigration = 0810;
 					};
 					388D72B81D57F3AE00D8DE77 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 388D72A21D57F3AE00D8DE77;
 					};
 					388D72C31D57F3AE00D8DE77 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 388D72A21D57F3AE00D8DE77;
 					};
 				};
@@ -234,7 +260,6 @@
 			files = (
 				388D72B31D57F3AE00D8DE77 /* LaunchScreen.storyboard in Resources */,
 				388D72B01D57F3AE00D8DE77 /* Assets.xcassets in Resources */,
-				388D72AE1D57F3AE00D8DE77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388D72AB1D57F3AE00D8DE77 /* Shaders.metal in Sources */,
+				388D72DA1D57FF1100D8DE77 /* Move.swift in Sources */,
 				388D72A91D57F3AE00D8DE77 /* GameViewController.swift in Sources */,
+				388D72D71D57FE4C00D8DE77 /* Monster.swift in Sources */,
+				388D72DF1D58056B00D8DE77 /* Battle.swift in Sources */,
 				388D72A71D57F3AE00D8DE77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388D72D81D57FE4C00D8DE77 /* Monster.swift in Sources */,
+				388D72DB1D57FF1100D8DE77 /* Move.swift in Sources */,
 				388D72BE1D57F3AE00D8DE77 /* tbbsTests.swift in Sources */,
+				388D72E01D58056B00D8DE77 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +327,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		388D72AC1D57F3AE00D8DE77 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				388D72AD1D57F3AE00D8DE77 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		388D72B11D57F3AE00D8DE77 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -330,8 +352,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -376,8 +400,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -396,6 +422,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -405,10 +432,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tbbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -416,10 +447,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tbbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -432,6 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tbbs.app/tbbs";
 			};
 			name = Debug;
@@ -444,6 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tbbs.app/tbbs";
 			};
 			name = Release;
@@ -456,6 +493,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = tbbs;
 			};
 			name = Debug;
@@ -467,6 +505,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = tbbs;
 			};
 			name = Release;
@@ -490,6 +529,7 @@
 				388D72CF1D57F3AE00D8DE77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388D72D01D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbsTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +538,7 @@
 				388D72D21D57F3AE00D8DE77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388D72D31D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbsUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +547,7 @@
 				388D72D51D57F3AE00D8DE77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
