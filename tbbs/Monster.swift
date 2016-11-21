@@ -6,8 +6,6 @@
 //  Copyright © 2016 Jim Boulter. All rights reserved.
 //
 
-import UIKit
-
 class Monster {
     
     var id:Int
