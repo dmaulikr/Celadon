@@ -36,5 +36,7 @@ class Battle {
         self.terrain = terrain
         self.weather = weather
     }
+	
+	
     
 }

@@ -30,10 +30,11 @@ enum TargetType {
     case team
     case all
 	case single_self
+	case single_ally
+	case team_ally
 }
 
 class Move {
-
     var id:Int
     var name:String
     var type:Type

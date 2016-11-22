@@ -25,6 +25,44 @@ class tbbsTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+	
+	func testExperienceCurves() {
+		var experienceCurve = ExperienceCurve.slow
+		
+		experienceCurve = .slow
+		XCTAssert(experienceCurve.experienceRequired(100) == 1250000)
+		XCTAssert(experienceCurve.experienceRequired(90, 100) == 338750)
+		XCTAssert(experienceCurve.experienceRequired(10) == 1250)
+		
+		experienceCurve = .medium_slow
+		XCTAssert(experienceCurve.experienceRequired(100) == 1059860)
+		XCTAssert(experienceCurve.experienceRequired(10) == 560)
+		
+		experienceCurve = .medium_fast
+		XCTAssert(experienceCurve.experienceRequired(100) == 1000000)
+		
+		experienceCurve = .fast
+		XCTAssert(experienceCurve.experienceRequired(100) == 800000)
+		XCTAssert(experienceCurve.experienceRequired(90,100) == 216800)
+		
+		experienceCurve = .erratic
+		XCTAssert(experienceCurve.experienceRequired(100) == 600000)
+		XCTAssert(experienceCurve.experienceRequired(10) == 1800)
+		XCTAssert(experienceCurve.experienceRequired(90,100) == 108654)
+		
+		experienceCurve = .fluctuating
+		XCTAssert(experienceCurve.experienceRequired(100) == 1640000)
+		XCTAssert(experienceCurve.experienceRequired(10) == 540)
+		XCTAssert(experienceCurve.experienceRequired(90, 100) == 517340)
+	}
+	
+	func testSettingMonsterLevelWrong() {
+		let m = Monster()
+		m.level = 101
+		XCTAssert(m.level == 100, "Level set over 100")
+		m.level = 0
+		XCTAssert(m.level == 1, "Level set under 1")
+	}
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
