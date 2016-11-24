@@ -15,11 +15,11 @@ enum BerryType {
 }
 
 class Berry:Item {
+	internal var itemType: ItemType
 	var berryType:BerryType
 	
-	override init() {
+	init() {
 		berryType = .healing
-		
-		super.init()
+		itemType = .consumable
 	}
 }

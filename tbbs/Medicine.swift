@@ -16,14 +16,16 @@ struct Affectivity : OptionSet {
 	static let poison  = Affectivity(rawValue: 1 << 2)
 }
 
-class Medicine : Item {
+class Medicine : Item, Cures, Heals {
+	internal var itemType: ItemType
 	
+	var healValue:Int
 	var affectivity:Affectivity
 	
-	override init() {
+	init() {
+		healValue = 0
 		affectivity = []
 		
-		super.init()
 		itemType = .consumable
 	}
 	

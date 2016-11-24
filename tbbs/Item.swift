@@ -24,18 +24,14 @@ enum SpecialConditions {
 	case confusion
 }
 
-protocol heals {
+protocol Heals {
 	var healValue:Int { get }
 }
 
-protocol cures {
-	var effects:[StatusEffect] { get }
+protocol Cures {
+	var affectivity:Affectivity { get }
 }
 
-class Item {
-	var itemType:ItemType
-	
-	init() {
-		itemType = .consumable
-	}
+protocol Item {
+	var itemType:ItemType { get set }
 }
