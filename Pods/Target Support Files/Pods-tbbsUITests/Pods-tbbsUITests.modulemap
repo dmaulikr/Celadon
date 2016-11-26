@@ -1,0 +1,6 @@
+framework module Pods_tbbsUITests {
+  umbrella header "Pods-tbbsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

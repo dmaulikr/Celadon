@@ -47,7 +47,7 @@ class Monster {
 		if level == 100 {
 			return Int.max
 		}
-		return experienceCurve.experienceRequired(level+1) - experienceCurve.experienceRequired(level)
+		return experienceCurve.experienceRequired(level,level+1)
 	}
 	
 	func hasExperienceToLevelUp() -> Bool{
