@@ -42,6 +42,7 @@ class Move {
     var criticalRatio:Float
 	var accuracy:Int
     var targetType:TargetType
+	var priority:Float
     
     class func moveWithId(_ id:Int) -> Move {
         //query for move
@@ -56,6 +57,7 @@ class Move {
         criticalRatio = 0.065
 		accuracy = 100
         targetType = .single
+		priority = 1
     }
     
     

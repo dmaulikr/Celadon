@@ -52,12 +52,48 @@ protocol BattleDelegate {
 	func actionDidOccur(_ action:Action)
 }
 
+struct StatModifier {
+	var modifier:Int {
+		didSet {
+			if modifier > 6 {
+				modifier = 6
+			} else if modifier < -6 {
+				modifier = -6
+			}
+		}
+	}
+	
+	mutating func modify(_ delta:Int) {
+		let adjustedDelta = delta
+		if delta < -3 {
+			print("Cannot lower stat modifier by less than -3")
+			adjustedDelta = -3
+		} else if delta > 3 {
+			print("Cannot rise stat modifier by more than 3")
+			adjustedDelta = 3
+		}
+		
+		modifier += adjustedDelta
+	}
+}
+
+struct StatModifiers {
+	var attack:StatModifier
+	var defense:StatModifier
+	var specialAttack:StatModifier
+	var specialDefense:StatModifier
+	var speed:StatModifier
+	var evasion:StatModifier
+}
+
 class Battle {
 
     var teams:[[Monster]]
     var terrain:TerrainType
     var weather:WeatherType
 	var delegate:BattleDelegate?
+	
+	var monsterStatModifiers:[Monster:StatModifiers]
 	
 	var turnCount:Int
 	

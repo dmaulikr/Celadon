@@ -25,13 +25,12 @@ struct Action {
 	
 	// move
 	var move:Move? = nil
-	var calculatedMovePriority:Float? = nil
 	
 	// item
 	var item:Item? = nil
 	
 	// rotate
-	var incomingMonster:Monster? = nil
+	var target:Monster? = nil
 	
 	init(_ move:Move, _ usedBy:Monster) {
 		actionType = .move
@@ -51,6 +50,18 @@ struct Action {
 		actionType = .rotate
 		
 		user = rotatingMonster
-		incomingMonster = forMonster
+		target = forMonster
+	}
+	
+	var calculatedMovePriority:Float? {
+		if move != nil {
+			// TODO Properly calculate this value
+			let targetSpeed = target.speed ?? 0.0
+			if let targetMonster = target {
+				
+			}
+			return move!.priority + Float(user.speed - targetSpeed)
+		}
+		return nil
 	}
 }

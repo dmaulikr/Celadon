@@ -8,6 +8,15 @@
 
 import Foundation
 
+struct Stats {
+	var healthPoints:Int
+	var attack:Int
+	var defense:Int
+	var specialAttack:Int
+	var specialDefense:Int
+	var speed:Int
+}
+
 class Monster {
     
     var id:Int
@@ -22,11 +31,17 @@ class Monster {
 	}
     var health:Int
 	var experience:Int
-    var moves:[Int]
-	var learnableMoves:[Int]
+    var moves:[Move]
+	var learnableMoves:[Move]
     var name:String
 	var experienceCurve:ExperienceCurve
-    
+	
+	private let baseStats:Stats
+	private let individualValues:Stats
+	private var experienceValues:Stats
+	
+	var currentStats:Stats
+	
     class func monsterWithId(_ id:Int) -> Monster {
         //query for monster
         return Monster()
