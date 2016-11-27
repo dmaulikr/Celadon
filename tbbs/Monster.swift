@@ -15,7 +15,35 @@ struct Stats {
 	var specialAttack:Int
 	var specialDefense:Int
 	var speed:Int
+	
+	subscript(_ statType:StatType) -> Int {
+		switch statType {
+		case .healthPoints:
+			return healthPoints
+		case .attack:
+			return attack
+		case .defense:
+			return defense
+		case .specialAttack:
+			return specialAttack
+		case .specialDefense:
+			return specialDefense
+		case .speed:
+			return speed
+		}
+	}
 }
+
+enum StatType {
+	case healthPoints
+	case attack
+	case defense
+	case specialAttack
+	case specialDefense
+	case speed
+}
+
+typealias ExperienceValue = (StatType, Int)
 
 class Monster {
     
@@ -52,11 +80,17 @@ class Monster {
 		level = 5
         health = 100
         experience = 69
-        moves = [0,1,2,3]
-		learnableMoves = [0,1,2,3]
+        moves = []
+		learnableMoves = []
 		experienceCurve = .slow
         name = "Monster"
+		baseStats = [1, 1, 1, 1, 1, 1]
+		individualValues = [1, 1, 1, 1, 1, 1]
+		experienceValues = [1, 1, 1, 1, 1, 1]
+		baseStats = [1, 1, 1, 1, 1, 1]
     }
+	
+	// MARK: Experience
 	
 	var experienceRequiredToLevel:Int {
 		if level == 100 {
@@ -67,5 +101,24 @@ class Monster {
 	
 	func hasExperienceToLevelUp() -> Bool{
 		return level < 100 && self.experience >= experienceCurve.experienceRequired(level+1)
+	}
+	
+	func willLevelWithExperienceAward(_ points:Int) -> Bool {
+		return (self.experience + points) > self.experienceRequiredToLevel
+	}
+	
+	func awardExperience(_ points:Int, _ experienceValue:ExperienceValue) {
+		self.experience += points
+		
+		if self.experience > self.experienceRequiredToLevel {
+			self.level += 1
+			// Consider a delegate method here
+		}
+		
+		self.awardExperienceValue(experienceValue)
+	}
+	
+	func awardExperienceValue(_ ev:ExperienceValue) {
+		
 	}
 }
