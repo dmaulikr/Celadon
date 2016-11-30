@@ -5,9 +5,9 @@
       location = "group:/Users/jimboulter/Code/tbbs/Celadon.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Celadon.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Celadon.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

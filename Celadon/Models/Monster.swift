@@ -8,42 +8,7 @@
 
 import Foundation
 
-struct Stats {
-	var healthPoints:Int
-	var attack:Int
-	var defense:Int
-	var specialAttack:Int
-	var specialDefense:Int
-	var speed:Int
-	
-	subscript(_ statType:StatType) -> Int {
-		switch statType {
-		case .healthPoints:
-			return healthPoints
-		case .attack:
-			return attack
-		case .defense:
-			return defense
-		case .specialAttack:
-			return specialAttack
-		case .specialDefense:
-			return specialDefense
-		case .speed:
-			return speed
-		}
-	}
-}
-
-enum StatType {
-	case healthPoints
-	case attack
-	case defense
-	case specialAttack
-	case specialDefense
-	case speed
-}
-
-typealias ExperienceValue = (StatType, Int)
+typealias ExperienceValue = (Stat, Int)
 
 class Monster {
     

@@ -64,7 +64,7 @@ struct StatModifier {
 	}
 	
 	mutating func modify(_ delta:Int) {
-		let adjustedDelta = delta
+		var adjustedDelta = delta
 		if delta < -3 {
 			print("Cannot lower stat modifier by less than -3")
 			adjustedDelta = -3
