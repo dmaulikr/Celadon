@@ -1,19 +1,19 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'tbbs' do
+target 'Celadon' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for tbbs
   pod "RealmSwift"
 
-  target 'tbbsTests' do
+  target 'CeladonTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'tbbsUITests' do
+  target 'CeladonUITests' do
     inherit! :search_paths
     # Pods for testing
   end

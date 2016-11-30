@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC51C470386519B1C500756 /* Pods_CeladonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712CAD1B11F68C93524D3238 /* Pods_CeladonUITests.framework */; };
 		324E31152FB8306C22F2A9BC /* Pods_tbbs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0B7AC668636D24AE6FE7E7 /* Pods_tbbs.framework */; };
 		38117F221DE5456500DB4CFE /* ExperienceCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38117F211DE5456500DB4CFE /* ExperienceCurve.swift */; };
 		38117F241DE7529C00DB4CFE /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38117F231DE7529C00DB4CFE /* Medicine.swift */; };
@@ -28,6 +29,8 @@
 		388D72DF1D58056B00D8DE77 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72DE1D58056B00D8DE77 /* Battle.swift */; };
 		388D72E01D58056B00D8DE77 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72DE1D58056B00D8DE77 /* Battle.swift */; };
 		3BA4CF19FC1AE242CD16F5FC /* Pods_tbbsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE4280281472719B45BC1ED /* Pods_tbbsTests.framework */; };
+		969CC290A5940C9DF963B2CB /* Pods_Celadon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3320DFED4055F5120B09DA5C /* Pods_Celadon.framework */; };
+		C9DEE92D0160C9C1FF111B29 /* Pods_CeladonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC229C074521C6F3C6EA1071 /* Pods_CeladonTests.framework */; };
 		CE4933E5467657C691BB1E09 /* Pods_tbbsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C7017E4D6AD1F0814C7F00 /* Pods_tbbsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +53,11 @@
 
 /* Begin PBXFileReference section */
 		01C7017E4D6AD1F0814C7F00 /* Pods_tbbsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tbbsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B8A522AA3F4060E8FED0B85 /* Pods-CeladonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeladonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CeladonTests/Pods-CeladonTests.release.xcconfig"; sourceTree = "<group>"; };
 		18072412493D5CBF8451DC94 /* Pods-tbbs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbbs.release.xcconfig"; path = "Pods/Target Support Files/Pods-tbbs/Pods-tbbs.release.xcconfig"; sourceTree = "<group>"; };
 		2432B6E5444FB8779B0AD25B /* Pods-tbbsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbbsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tbbsUITests/Pods-tbbsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2FAD9CA8C6D53C5B02C9ACE1 /* Pods-CeladonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeladonUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CeladonUITests/Pods-CeladonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3320DFED4055F5120B09DA5C /* Pods_Celadon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Celadon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38117F211DE5456500DB4CFE /* ExperienceCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceCurve.swift; sourceTree = "<group>"; };
 		38117F231DE7529C00DB4CFE /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		38117F261DE7CC3400DB4CFE /* ActionQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionQueue.swift; sourceTree = "<group>"; };
@@ -74,10 +80,16 @@
 		388D72D61D57FE4C00D8DE77 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		388D72D91D57FF1100D8DE77 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		388D72DE1D58056B00D8DE77 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
+		4F3B311868389BBA455E536C /* Pods-Celadon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Celadon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Celadon/Pods-Celadon.release.xcconfig"; sourceTree = "<group>"; };
+		712CAD1B11F68C93524D3238 /* Pods_CeladonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeladonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0B7AC668636D24AE6FE7E7 /* Pods_tbbs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tbbs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC5E93BBFB250724B4B540D /* Pods-tbbs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbbs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tbbs/Pods-tbbs.debug.xcconfig"; sourceTree = "<group>"; };
+		91D762114188141BF1A20459 /* Pods-CeladonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeladonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CeladonTests/Pods-CeladonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		91D7B298FBAE7D0569BB3C7F /* Pods-CeladonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeladonUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CeladonUITests/Pods-CeladonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A0A2BDCAD0D740AFABAAFF2C /* Pods-tbbsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbbsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tbbsTests/Pods-tbbsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE6A983BE81C02ADD3EC5448 /* Pods-tbbsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbbsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tbbsUITests/Pods-tbbsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7F1E83821EB19B846B33D23 /* Pods-Celadon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Celadon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Celadon/Pods-Celadon.debug.xcconfig"; sourceTree = "<group>"; };
+		CC229C074521C6F3C6EA1071 /* Pods_CeladonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeladonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE4280281472719B45BC1ED /* Pods_tbbsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tbbsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4A82B6BB242B35C80D8345 /* Pods-tbbsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tbbsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tbbsTests/Pods-tbbsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				324E31152FB8306C22F2A9BC /* Pods_tbbs.framework in Frameworks */,
+				969CC290A5940C9DF963B2CB /* Pods_Celadon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BA4CF19FC1AE242CD16F5FC /* Pods_tbbsTests.framework in Frameworks */,
+				C9DEE92D0160C9C1FF111B29 /* Pods_CeladonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4933E5467657C691BB1E09 /* Pods_tbbsUITests.framework in Frameworks */,
+				0FC51C470386519B1C500756 /* Pods_CeladonUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,28 +130,28 @@
 			children = (
 				38117F261DE7CC3400DB4CFE /* ActionQueue.swift */,
 			);
-			name = Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		38117F281DE7CF2700DB4CFE /* Battles */ = {
 			isa = PBXGroup;
 			children = (
 				38117F251DE7CC2600DB4CFE /* Utilities */,
-				388D72DE1D58056B00D8DE77 /* Battle.swift */,
 				38117F291DE7CF4000DB4CFE /* Action.swift */,
+				388D72DE1D58056B00D8DE77 /* Battle.swift */,
 			);
-			name = Battles;
+			path = Battles;
 			sourceTree = "<group>";
 		};
 		3865991C1DE5321500678E34 /* Items */ = {
 			isa = PBXGroup;
 			children = (
 				3865991A1DE5307300678E34 /* Bag.swift */,
-				3865991D1DE5324200678E34 /* Item.swift */,
 				386599211DE5355900678E34 /* Berry.swift */,
+				3865991D1DE5324200678E34 /* Item.swift */,
 				38117F231DE7529C00DB4CFE /* Medicine.swift */,
 			);
-			name = Items;
+			path = Items;
 			sourceTree = "<group>";
 		};
 		388D729A1D57F3AE00D8DE77 = {
@@ -145,9 +160,9 @@
 				388D72A51D57F3AE00D8DE77 /* Celadon */,
 				388D72BC1D57F3AE00D8DE77 /* CeladonTests */,
 				388D72C71D57F3AE00D8DE77 /* CeladonUITests */,
-				388D72A41D57F3AE00D8DE77 /* Products */,
-				D725BD8BC0A071C348977EFC /* Pods */,
 				70F72D7BBFCC731D0C97F2F7 /* Frameworks */,
+				D725BD8BC0A071C348977EFC /* Pods */,
+				388D72A41D57F3AE00D8DE77 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,13 +181,12 @@
 			children = (
 				388D72DD1D5800F500D8DE77 /* Controllers */,
 				388D72DC1D5800ED00D8DE77 /* Models */,
+				388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */,
 				388D72AF1D57F3AE00D8DE77 /* Assets.xcassets */,
 				388D72B41D57F3AE00D8DE77 /* Info.plist */,
 				388D72B11D57F3AE00D8DE77 /* LaunchScreen.storyboard */,
-				388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */,
 			);
-			name = Celadon;
-			path = tbbs;
+			path = Celadon;
 			sourceTree = "<group>";
 		};
 		388D72BC1D57F3AE00D8DE77 /* CeladonTests */ = {
@@ -181,8 +195,7 @@
 				388D72BD1D57F3AE00D8DE77 /* CeladonTests.swift */,
 				388D72BF1D57F3AE00D8DE77 /* Info.plist */,
 			);
-			name = CeladonTests;
-			path = tbbsTests;
+			path = CeladonTests;
 			sourceTree = "<group>";
 		};
 		388D72C71D57F3AE00D8DE77 /* CeladonUITests */ = {
@@ -191,20 +204,19 @@
 				388D72C81D57F3AE00D8DE77 /* CeladonUITests.swift */,
 				388D72CA1D57F3AE00D8DE77 /* Info.plist */,
 			);
-			name = CeladonUITests;
-			path = tbbsUITests;
+			path = CeladonUITests;
 			sourceTree = "<group>";
 		};
 		388D72DC1D5800ED00D8DE77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				38117F281DE7CF2700DB4CFE /* Battles */,
-				388D72D91D57FF1100D8DE77 /* Move.swift */,
-				388D72D61D57FE4C00D8DE77 /* Monster.swift */,
-				38117F211DE5456500DB4CFE /* ExperienceCurve.swift */,
 				3865991C1DE5321500678E34 /* Items */,
+				38117F211DE5456500DB4CFE /* ExperienceCurve.swift */,
+				388D72D61D57FE4C00D8DE77 /* Monster.swift */,
+				388D72D91D57FF1100D8DE77 /* Move.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		388D72DD1D5800F500D8DE77 /* Controllers */ = {
@@ -212,7 +224,7 @@
 			children = (
 				388D72A81D57F3AE00D8DE77 /* GameViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		70F72D7BBFCC731D0C97F2F7 /* Frameworks */ = {
@@ -221,6 +233,9 @@
 				7D0B7AC668636D24AE6FE7E7 /* Pods_tbbs.framework */,
 				CEE4280281472719B45BC1ED /* Pods_tbbsTests.framework */,
 				01C7017E4D6AD1F0814C7F00 /* Pods_tbbsUITests.framework */,
+				3320DFED4055F5120B09DA5C /* Pods_Celadon.framework */,
+				CC229C074521C6F3C6EA1071 /* Pods_CeladonTests.framework */,
+				712CAD1B11F68C93524D3238 /* Pods_CeladonUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,6 +249,12 @@
 				EE4A82B6BB242B35C80D8345 /* Pods-tbbsTests.release.xcconfig */,
 				AE6A983BE81C02ADD3EC5448 /* Pods-tbbsUITests.debug.xcconfig */,
 				2432B6E5444FB8779B0AD25B /* Pods-tbbsUITests.release.xcconfig */,
+				B7F1E83821EB19B846B33D23 /* Pods-Celadon.debug.xcconfig */,
+				4F3B311868389BBA455E536C /* Pods-Celadon.release.xcconfig */,
+				91D762114188141BF1A20459 /* Pods-CeladonTests.debug.xcconfig */,
+				0B8A522AA3F4060E8FED0B85 /* Pods-CeladonTests.release.xcconfig */,
+				2FAD9CA8C6D53C5B02C9ACE1 /* Pods-CeladonUITests.debug.xcconfig */,
+				91D7B298FBAE7D0569BB3C7F /* Pods-CeladonUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -388,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tbbs/Pods-tbbs-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Celadon/Pods-Celadon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1FEAF0F80A5E42DA4F035798 /* [CP] Check Pods Manifest.lock */ = {
@@ -418,7 +439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tbbsUITests/Pods-tbbsUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CeladonUITests/Pods-CeladonUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4EAD56EDA0148F65F17169FA /* [CP] Copy Pods Resources */ = {
@@ -433,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tbbsTests/Pods-tbbsTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CeladonTests/Pods-CeladonTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		83DB616358DF14543AC77CE7 /* [CP] Check Pods Manifest.lock */ = {
@@ -478,7 +499,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tbbs/Pods-tbbs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Celadon/Pods-Celadon-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D28EBB5F3CA76B2AA64CF386 /* [CP] Embed Pods Frameworks */ = {
@@ -493,7 +514,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tbbsTests/Pods-tbbsTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CeladonTests/Pods-CeladonTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -559,6 +580,7 @@
 				388D72B21D57F3AE00D8DE77 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -656,12 +678,12 @@
 		};
 		388D72CE1D57F3AE00D8DE77 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EC5E93BBFB250724B4B540D /* Pods-tbbs.debug.xcconfig */;
+			baseConfigurationReference = B7F1E83821EB19B846B33D23 /* Pods-Celadon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = tbbs/Info.plist;
+				INFOPLIST_FILE = Celadon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.Celadon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -672,12 +694,12 @@
 		};
 		388D72CF1D57F3AE00D8DE77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18072412493D5CBF8451DC94 /* Pods-tbbs.release.xcconfig */;
+			baseConfigurationReference = 4F3B311868389BBA455E536C /* Pods-Celadon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = tbbs/Info.plist;
+				INFOPLIST_FILE = Celadon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.Celadon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -688,11 +710,11 @@
 		};
 		388D72D11D57F3AE00D8DE77 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0A2BDCAD0D740AFABAAFF2C /* Pods-tbbsTests.debug.xcconfig */;
+			baseConfigurationReference = 91D762114188141BF1A20459 /* Pods-CeladonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = tbbsTests/Info.plist;
+				INFOPLIST_FILE = CeladonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -703,10 +725,10 @@
 		};
 		388D72D21D57F3AE00D8DE77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE4A82B6BB242B35C80D8345 /* Pods-tbbsTests.release.xcconfig */;
+			baseConfigurationReference = 0B8A522AA3F4060E8FED0B85 /* Pods-CeladonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = tbbsTests/Info.plist;
+				INFOPLIST_FILE = CeladonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -717,10 +739,10 @@
 		};
 		388D72D41D57F3AE00D8DE77 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE6A983BE81C02ADD3EC5448 /* Pods-tbbsUITests.debug.xcconfig */;
+			baseConfigurationReference = 2FAD9CA8C6D53C5B02C9ACE1 /* Pods-CeladonUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = tbbsUITests/Info.plist;
+				INFOPLIST_FILE = CeladonUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -731,9 +753,9 @@
 		};
 		388D72D51D57F3AE00D8DE77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2432B6E5444FB8779B0AD25B /* Pods-tbbsUITests.release.xcconfig */;
+			baseConfigurationReference = 91D7B298FBAE7D0569BB3C7F /* Pods-CeladonUITests.release.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = tbbsUITests/Info.plist;
+				INFOPLIST_FILE = CeladonUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
