@@ -19,8 +19,8 @@
 		388D72A91D57F3AE00D8DE77 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72A81D57F3AE00D8DE77 /* GameViewController.swift */; };
 		388D72B01D57F3AE00D8DE77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388D72AF1D57F3AE00D8DE77 /* Assets.xcassets */; };
 		388D72B31D57F3AE00D8DE77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388D72B11D57F3AE00D8DE77 /* LaunchScreen.storyboard */; };
-		388D72BE1D57F3AE00D8DE77 /* tbbsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72BD1D57F3AE00D8DE77 /* tbbsTests.swift */; };
-		388D72C91D57F3AE00D8DE77 /* tbbsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72C81D57F3AE00D8DE77 /* tbbsUITests.swift */; };
+		388D72BE1D57F3AE00D8DE77 /* CeladonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72BD1D57F3AE00D8DE77 /* CeladonTests.swift */; };
+		388D72C91D57F3AE00D8DE77 /* CeladonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72C81D57F3AE00D8DE77 /* CeladonUITests.swift */; };
 		388D72D71D57FE4C00D8DE77 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D61D57FE4C00D8DE77 /* Monster.swift */; };
 		388D72D81D57FE4C00D8DE77 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D61D57FE4C00D8DE77 /* Monster.swift */; };
 		388D72DA1D57FF1100D8DE77 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D91D57FF1100D8DE77 /* Move.swift */; };
@@ -59,17 +59,17 @@
 		3865991A1DE5307300678E34 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		3865991D1DE5324200678E34 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		386599211DE5355900678E34 /* Berry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Berry.swift; sourceTree = "<group>"; };
-		388D72A31D57F3AE00D8DE77 /* tbbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tbbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		388D72A31D57F3AE00D8DE77 /* Celadon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Celadon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		388D72A81D57F3AE00D8DE77 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		388D72AF1D57F3AE00D8DE77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		388D72B21D57F3AE00D8DE77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		388D72B41D57F3AE00D8DE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		388D72B91D57F3AE00D8DE77 /* tbbsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tbbsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		388D72BD1D57F3AE00D8DE77 /* tbbsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tbbsTests.swift; sourceTree = "<group>"; };
+		388D72B91D57F3AE00D8DE77 /* CeladonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeladonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		388D72BD1D57F3AE00D8DE77 /* CeladonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeladonTests.swift; sourceTree = "<group>"; };
 		388D72BF1D57F3AE00D8DE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		388D72C41D57F3AE00D8DE77 /* tbbsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tbbsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		388D72C81D57F3AE00D8DE77 /* tbbsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tbbsUITests.swift; sourceTree = "<group>"; };
+		388D72C41D57F3AE00D8DE77 /* CeladonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeladonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		388D72C81D57F3AE00D8DE77 /* CeladonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeladonUITests.swift; sourceTree = "<group>"; };
 		388D72CA1D57F3AE00D8DE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		388D72D61D57FE4C00D8DE77 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		388D72D91D57FF1100D8DE77 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
@@ -142,9 +142,9 @@
 		388D729A1D57F3AE00D8DE77 = {
 			isa = PBXGroup;
 			children = (
-				388D72A51D57F3AE00D8DE77 /* tbbs */,
-				388D72BC1D57F3AE00D8DE77 /* tbbsTests */,
-				388D72C71D57F3AE00D8DE77 /* tbbsUITests */,
+				388D72A51D57F3AE00D8DE77 /* Celadon */,
+				388D72BC1D57F3AE00D8DE77 /* CeladonTests */,
+				388D72C71D57F3AE00D8DE77 /* CeladonUITests */,
 				388D72A41D57F3AE00D8DE77 /* Products */,
 				D725BD8BC0A071C348977EFC /* Pods */,
 				70F72D7BBFCC731D0C97F2F7 /* Frameworks */,
@@ -154,14 +154,14 @@
 		388D72A41D57F3AE00D8DE77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				388D72A31D57F3AE00D8DE77 /* tbbs.app */,
-				388D72B91D57F3AE00D8DE77 /* tbbsTests.xctest */,
-				388D72C41D57F3AE00D8DE77 /* tbbsUITests.xctest */,
+				388D72A31D57F3AE00D8DE77 /* Celadon.app */,
+				388D72B91D57F3AE00D8DE77 /* CeladonTests.xctest */,
+				388D72C41D57F3AE00D8DE77 /* CeladonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		388D72A51D57F3AE00D8DE77 /* tbbs */ = {
+		388D72A51D57F3AE00D8DE77 /* Celadon */ = {
 			isa = PBXGroup;
 			children = (
 				388D72DD1D5800F500D8DE77 /* Controllers */,
@@ -171,24 +171,27 @@
 				388D72B11D57F3AE00D8DE77 /* LaunchScreen.storyboard */,
 				388D72A61D57F3AE00D8DE77 /* AppDelegate.swift */,
 			);
+			name = Celadon;
 			path = tbbs;
 			sourceTree = "<group>";
 		};
-		388D72BC1D57F3AE00D8DE77 /* tbbsTests */ = {
+		388D72BC1D57F3AE00D8DE77 /* CeladonTests */ = {
 			isa = PBXGroup;
 			children = (
-				388D72BD1D57F3AE00D8DE77 /* tbbsTests.swift */,
+				388D72BD1D57F3AE00D8DE77 /* CeladonTests.swift */,
 				388D72BF1D57F3AE00D8DE77 /* Info.plist */,
 			);
+			name = CeladonTests;
 			path = tbbsTests;
 			sourceTree = "<group>";
 		};
-		388D72C71D57F3AE00D8DE77 /* tbbsUITests */ = {
+		388D72C71D57F3AE00D8DE77 /* CeladonUITests */ = {
 			isa = PBXGroup;
 			children = (
-				388D72C81D57F3AE00D8DE77 /* tbbsUITests.swift */,
+				388D72C81D57F3AE00D8DE77 /* CeladonUITests.swift */,
 				388D72CA1D57F3AE00D8DE77 /* Info.plist */,
 			);
+			name = CeladonUITests;
 			path = tbbsUITests;
 			sourceTree = "<group>";
 		};
@@ -238,9 +241,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		388D72A21D57F3AE00D8DE77 /* tbbs */ = {
+		388D72A21D57F3AE00D8DE77 /* Celadon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 388D72CD1D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbs" */;
+			buildConfigurationList = 388D72CD1D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "Celadon" */;
 			buildPhases = (
 				83DB616358DF14543AC77CE7 /* [CP] Check Pods Manifest.lock */,
 				388D729F1D57F3AE00D8DE77 /* Sources */,
@@ -253,14 +256,14 @@
 			);
 			dependencies = (
 			);
-			name = tbbs;
+			name = Celadon;
 			productName = tbbs;
-			productReference = 388D72A31D57F3AE00D8DE77 /* tbbs.app */;
+			productReference = 388D72A31D57F3AE00D8DE77 /* Celadon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		388D72B81D57F3AE00D8DE77 /* tbbsTests */ = {
+		388D72B81D57F3AE00D8DE77 /* CeladonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 388D72D01D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbsTests" */;
+			buildConfigurationList = 388D72D01D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "CeladonTests" */;
 			buildPhases = (
 				B770AA573305D105E3B1D4D4 /* [CP] Check Pods Manifest.lock */,
 				388D72B51D57F3AE00D8DE77 /* Sources */,
@@ -274,14 +277,14 @@
 			dependencies = (
 				388D72BB1D57F3AE00D8DE77 /* PBXTargetDependency */,
 			);
-			name = tbbsTests;
+			name = CeladonTests;
 			productName = tbbsTests;
-			productReference = 388D72B91D57F3AE00D8DE77 /* tbbsTests.xctest */;
+			productReference = 388D72B91D57F3AE00D8DE77 /* CeladonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		388D72C31D57F3AE00D8DE77 /* tbbsUITests */ = {
+		388D72C31D57F3AE00D8DE77 /* CeladonUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 388D72D31D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbsUITests" */;
+			buildConfigurationList = 388D72D31D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "CeladonUITests" */;
 			buildPhases = (
 				1FEAF0F80A5E42DA4F035798 /* [CP] Check Pods Manifest.lock */,
 				388D72C01D57F3AE00D8DE77 /* Sources */,
@@ -294,9 +297,9 @@
 			dependencies = (
 				388D72C61D57F3AE00D8DE77 /* PBXTargetDependency */,
 			);
-			name = tbbsUITests;
+			name = CeladonUITests;
 			productName = tbbsUITests;
-			productReference = 388D72C41D57F3AE00D8DE77 /* tbbsUITests.xctest */;
+			productReference = 388D72C41D57F3AE00D8DE77 /* CeladonUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -326,7 +329,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 388D729E1D57F3AE00D8DE77 /* Build configuration list for PBXProject "tbbs" */;
+			buildConfigurationList = 388D729E1D57F3AE00D8DE77 /* Build configuration list for PBXProject "Celadon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -339,9 +342,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				388D72A21D57F3AE00D8DE77 /* tbbs */,
-				388D72B81D57F3AE00D8DE77 /* tbbsTests */,
-				388D72C31D57F3AE00D8DE77 /* tbbsUITests */,
+				388D72A21D57F3AE00D8DE77 /* Celadon */,
+				388D72B81D57F3AE00D8DE77 /* CeladonTests */,
+				388D72C31D57F3AE00D8DE77 /* CeladonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -521,7 +524,7 @@
 			files = (
 				388D72D81D57FE4C00D8DE77 /* Monster.swift in Sources */,
 				388D72DB1D57FF1100D8DE77 /* Move.swift in Sources */,
-				388D72BE1D57F3AE00D8DE77 /* tbbsTests.swift in Sources */,
+				388D72BE1D57F3AE00D8DE77 /* CeladonTests.swift in Sources */,
 				388D72E01D58056B00D8DE77 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,7 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388D72C91D57F3AE00D8DE77 /* tbbsUITests.swift in Sources */,
+				388D72C91D57F3AE00D8DE77 /* CeladonUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,12 +542,12 @@
 /* Begin PBXTargetDependency section */
 		388D72BB1D57F3AE00D8DE77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 388D72A21D57F3AE00D8DE77 /* tbbs */;
+			target = 388D72A21D57F3AE00D8DE77 /* Celadon */;
 			targetProxy = 388D72BA1D57F3AE00D8DE77 /* PBXContainerItemProxy */;
 		};
 		388D72C61D57F3AE00D8DE77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 388D72A21D57F3AE00D8DE77 /* tbbs */;
+			target = 388D72A21D57F3AE00D8DE77 /* Celadon */;
 			targetProxy = 388D72C51D57F3AE00D8DE77 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -660,7 +663,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tbbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.Celadon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -676,7 +679,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tbbs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.Celadon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -694,7 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tbbs.app/tbbs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Celadon.app/Celadon";
 			};
 			name = Debug;
 		};
@@ -708,7 +711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jimboulter.tbbsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tbbs.app/tbbs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Celadon.app/Celadon";
 			};
 			name = Release;
 		};
@@ -742,7 +745,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		388D729E1D57F3AE00D8DE77 /* Build configuration list for PBXProject "tbbs" */ = {
+		388D729E1D57F3AE00D8DE77 /* Build configuration list for PBXProject "Celadon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				388D72CB1D57F3AE00D8DE77 /* Debug */,
@@ -751,7 +754,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		388D72CD1D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbs" */ = {
+		388D72CD1D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "Celadon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				388D72CE1D57F3AE00D8DE77 /* Debug */,
@@ -760,7 +763,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		388D72D01D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbsTests" */ = {
+		388D72D01D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "CeladonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				388D72D11D57F3AE00D8DE77 /* Debug */,
@@ -769,7 +772,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		388D72D31D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "tbbsUITests" */ = {
+		388D72D31D57F3AE00D8DE77 /* Build configuration list for PBXNativeTarget "CeladonUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				388D72D41D57F3AE00D8DE77 /* Debug */,

@@ -1,15 +1,15 @@
 //
-//  tbbsTests.swift
-//  tbbsTests
+//  CeladonTests.swift
+//  CeladonTests
 //
 //  Created by Jim Boulter on 8/7/16.
 //  Copyright © 2016 Jim Boulter. All rights reserved.
 //
 
 import XCTest
-@testable import tbbs
+@testable import Celadon
 
-class tbbsTests: XCTestCase {
+class CeladonTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
