@@ -55,12 +55,12 @@ struct Action {
 	
 	var calculatedMovePriority:Float? {
 		if move != nil {
-			// TODO Properly calculate this value
-			let targetSpeed = target.speed ?? 0.0
-			if let targetMonster = target {
-				
+			// TODO: Properly calculate this value
+			var speed = user.speed
+			if let tgt = target {
+				speed -= tgt.speed
 			}
-			return move!.priority + Float(user.speed - targetSpeed)
+			return move!.priority + Float(speed)
 		}
 		return nil
 	}

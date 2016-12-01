@@ -10,8 +10,14 @@ import Foundation
 
 typealias ExperienceValue = (Stat, Int)
 
-class Monster {
-    
+class Monster : Hashable {
+	
+	/// The hash value.
+	///
+	/// Hash values are not guaranteed to be equal across different executions of
+	/// your program. Do not save hash values to use during a future execution.
+	public var hashValue: Int
+
     var id:Int
 	var level:Int {
 		didSet {
@@ -22,18 +28,18 @@ class Monster {
 			}
 		}
 	}
+
     var health:Int
 	var experience:Int
     var moves:[Move]
 	var learnableMoves:[Move]
     var name:String
 	var experienceCurve:ExperienceCurve
+	let nature:Nature
 	
 	private let baseStats:Stats
 	private let individualValues:Stats
 	private var experienceValues:Stats
-	
-	var currentStats:Stats
 	
     class func monsterWithId(_ id:Int) -> Monster {
         //query for monster
@@ -41,6 +47,9 @@ class Monster {
     }
     
     init() {
+		
+		hashValue = UUID().hashValue
+		
         id = 0
 		level = 5
         health = 100
@@ -52,8 +61,27 @@ class Monster {
 		baseStats = [1, 1, 1, 1, 1, 1]
 		individualValues = [1, 1, 1, 1, 1, 1]
 		experienceValues = [1, 1, 1, 1, 1, 1]
-		baseStats = [1, 1, 1, 1, 1, 1]
+		nature = .hardy
     }
+	
+	// MARK: Stats
+	
+	
+	
+	var speed:Int {
+		get {
+			return valueForStat(.speed)
+		}
+	}
+	
+	func valueForStat(_ stat:Stat) -> Int {
+		let numerator:Float = Float((2 * baseStats[stat]) + individualValues[stat]) + (Float(experienceValues[stat])/4.0) * Float(level)
+		let frac:Float = numerator / 100.0
+		let flr:Float = floor(frac) + 5.0
+		let withNature = flr * Float(nature.multiplierFor(.speed))
+		
+		return Int(floor(withNature))
+	}
 	
 	// MARK: Experience
 	
@@ -85,5 +113,11 @@ class Monster {
 	
 	func awardExperienceValue(_ ev:ExperienceValue) {
 		
+	}
+	
+	// MARK: Hashable
+	
+	public static func ==(lhs: Monster, rhs: Monster) -> Bool {
+		return lhs.hashValue == rhs.hashValue
 	}
 }

@@ -93,20 +93,17 @@ class Battle {
     var weather:WeatherType
 	var delegate:BattleDelegate?
 	
-	var monsterStatModifiers:[Monster:StatModifiers]
+	var monsterStatModifiers:[Monster:StatModifiers] = [:]
 	
-	var turnCount:Int
+	var turnCount:Int = 0
 	
-	private var actionQueue:ActionQueue
+	private var actionQueue:ActionQueue = ActionQueue()
     
 	init(teams:[[Monster]], terrain:TerrainType = .plains, weather:WeatherType = .clear, delegate:BattleDelegate? = nil) {
         self.teams = teams
         self.terrain = terrain
         self.weather = weather
 		self.delegate = delegate
-		
-		self.actionQueue = ActionQueue()
-		self.turnCount = 0
     }
 	
 	func resume() {

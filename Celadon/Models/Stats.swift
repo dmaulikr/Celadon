@@ -8,29 +8,57 @@
 
 import Foundation
 
-struct Stats {
-    var healthPoints:Int
-    var attack:Int
-    var defense:Int
-    var specialAttack:Int
-    var specialDefense:Int
-    var speed:Int
+struct Stats : ExpressibleByArrayLiteral {
+    var healthPoints:Int = 0
+    var attack:Int = 0
+    var defense:Int = 0
+    var specialAttack:Int = 0
+    var specialDefense:Int = 0
+    var speed:Int = 0
+	
+	init(arrayLiteral elements: Int...) {
+		for i in 0..<elements.count {
+			if let stat = Stat(rawValue: i) {
+				self[stat] = elements[i]
+			} else {
+				return
+			}
+		}
+	}
     
     subscript(_ stat:Stat) -> Int {
-        switch stat {
-        case .healthPoints:
-            return healthPoints
-        case .attack:
-            return attack
-        case .defense:
-            return defense
-        case .specialAttack:
-            return specialAttack
-        case .specialDefense:
-            return specialDefense
-        case .speed:
-            return speed
-        }
+		get {
+			switch stat {
+			case .healthPoints:
+				return healthPoints
+			case .attack:
+				return attack
+			case .defense:
+				return defense
+			case .specialAttack:
+				return specialAttack
+			case .specialDefense:
+				return specialDefense
+			case .speed:
+				return speed
+			}
+		}
+		set(newValue) {
+			switch stat {
+			case .healthPoints:
+				healthPoints = newValue
+			case .attack:
+				attack = newValue
+			case .defense:
+				defense = newValue
+			case .specialAttack:
+				specialAttack = newValue
+			case .specialDefense:
+				specialDefense = newValue
+			case .speed:
+				speed = newValue
+			}
+		}
     }
 }
 
@@ -43,6 +71,8 @@ enum Stat : Int {
     case specialAttack = 3
     case specialDefense = 4
     case speed = 5
-    
-    case none = -1
+	
+	static func max() -> Stat {
+		return .speed
+	}
 }
