@@ -8,69 +8,42 @@
 
 import Foundation
 
-enum Nature : NatureEffect {
-    case hardy, docile, bashful, quirky = "-1,-1"
-    case lonely = "1,2"
-    case brave = "1,5"
-    case adamant = "1,3"
-    case naughty = "1,4"
-    case bold = "2,1"
-    case relaxed = "2,5"
-    case impish = "2,3"
-    case lax = "2,4"
-    case timid = "5,1"
-    case hasty = "5,2"
-    case jolly = "5,3"
-    case naive = "5,4"
-    case modest = "3,1"
-    case mild = "3,2"
-    case quiet = "3,5"
-    case rash = "3,4"
-    case calm = "4,1"
-    case gentle = "4,2"
-    case sassy = "4,5"
-    case careful = "4,3"
+struct Nature : Equatable {
 
-	func multiplierFor(_ stat:Stat) -> Float {
-		return self.rawValue.multiplierFor(stat)
-	}
-}
-
-struct NatureEffect : ExpressibleByStringLiteral, Equatable {
-	
-	typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
-	typealias UnicodeScalarLiteralType = Character
+	static let hardy =		Nature(nil,nil,"hardy")
+	static let docile =		Nature(nil,nil,"docile")
+	static let bashful =	Nature(nil,nil,"bashful")
+	static let quirky =		Nature(nil,nil,"quirky")
+    static let lonely =		Nature(.attack,.defense,"lonely")
+    static let brave =		Nature(.attack,.speed,"brave")
+    static let adamant =	Nature(.attack,.specialAttack,"adamant")
+    static let naughty =	Nature(.attack,.specialDefense,"naughty")
+    static let bold =		Nature(.defense,.attack,"bold")
+    static let relaxed =	Nature(.defense,.speed,"relaxed")
+    static let impish =		Nature(.defense,.specialAttack,"impish")
+    static let lax =		Nature(.defense,.specialDefense,"lax")
+    static let timid =		Nature(.speed,.attack,"timid")
+    static let hasty =		Nature(.speed,.defense,"hasty")
+    static let jolly =		Nature(.speed,.specialAttack,"jolly")
+    static let naive =		Nature(.speed,.specialDefense,"naive")
+    static let modest =		Nature(.specialAttack,.attack,"modest")
+    static let mild =		Nature(.specialAttack,.defense,"mild")
+    static let quiet =		Nature(.specialAttack,.speed,"quiet")
+    static let rash =		Nature(.specialAttack,.specialDefense,"rash")
+    static let calm =		Nature(.specialDefense,.attack,"calm")
+    static let gentle =		Nature(.specialDefense,.defense,"gentle")
+    static let sassy =		Nature(.specialDefense,.speed,"sassy")
+    static let careful =	Nature(.specialDefense,.specialAttack,"careful")
 	
 	var increasedStat:Stat? = nil
 	var decreasedStat:Stat? = nil
-	
-	/// Creates an instance initialized to the given string value.
-	init(stringLiteral value: StringLiteralType) {
-		self.init(string:value)
+	var name:String = "hardy"
+
+	init(_ increased:Stat? = nil, _ decreased:Stat? = nil, _ _name:String) {
+		increasedStat = increased
+		decreasedStat = decreased
+		name = _name
 	}
-	
-	init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
-		self.init(string:"\(value)")
-	}
-	
-	init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
-		self.init(string:value)
-	}
-	
-	init(string:String) {
-		let arr = string.components(separatedBy:",")
-		let arrOfInts = arr.map{ Int($0) }
-		if let inc:Int = arrOfInts[0], let dec:Int = arrOfInts[1] {
-			self.init(Stat(rawValue:inc), Stat(rawValue:dec))
-		} else {
-			self.init(nil, nil)
-		}
-	}
-	
-    init(_ increased:Stat? = nil, _ decreased:Stat? = nil) {
-        increasedStat = increased
-        decreasedStat = decreased
-    }
 	
 	func multiplierFor(_ stat:Stat) -> Float {
 		if self.increasedStat == stat {
@@ -84,21 +57,8 @@ struct NatureEffect : ExpressibleByStringLiteral, Equatable {
 			return 1
 		}
 	}
-    
-    static func convertFromStringLiteral(value:String) -> NatureEffect {
-        return NatureEffect(stringLiteral: value)
-    }
-    
-    func stringValue() -> String {
-        return "\(increasedStat),\(decreasedStat)"
-    }
 	
-	static func ==(_ lhs:NatureEffect, _ rhs:NatureEffect) -> Bool {
+	static func ==(_ lhs:Nature, _ rhs:Nature) -> Bool {
 		return lhs.increasedStat == rhs.increasedStat && lhs.decreasedStat == rhs.decreasedStat
 	}
-    
-    // Has to do with poffins and stuff
-    // Do much later
-    //var favoriteFlavor:Flavor
-    //var dislikedFlavor:Flavor
 }

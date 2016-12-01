@@ -58,7 +58,7 @@ struct MoveQueue : Queue {
 				}
 			} else {
 				// error: bahavior undefined
-				print("You can't just insert a non move into a move queue and not expect me to be pissed.")
+				print("You can't just insert a non-move into a move queue and not expect me to be pissed.")
 			}
 		}
 		if !didInsert {

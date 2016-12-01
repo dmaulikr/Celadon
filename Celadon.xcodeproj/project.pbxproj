@@ -117,8 +117,8 @@
 		0CA4144B1DEF3532009EA043 /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
-				38117F211DE5456500DB4CFE /* ExperienceCurve.swift */,
 				388D72D61D57FE4C00D8DE77 /* Monster.swift */,
+				38117F211DE5456500DB4CFE /* ExperienceCurve.swift */,
 				0CA4144C1DEF35A1009EA043 /* Natures.swift */,
 				0CA4144E1DEF367A009EA043 /* Stats.swift */,
 			);

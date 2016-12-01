@@ -1,6 +1,6 @@
 //
 //  Monster.swift
-//  tbbs
+//  Celadon
 //
 //  Created by Jim Boulter on 8/7/16.
 //  Copyright © 2016 Jim Boulter. All rights reserved.
@@ -17,8 +17,15 @@ class Monster : Hashable {
 	/// Hash values are not guaranteed to be equal across different executions of
 	/// your program. Do not save hash values to use during a future execution.
 	public var hashValue: Int
-
-    var id:Int
+	var id:Int
+    var health:Int
+	var experience:Int
+    var moves:[Move]
+	var learnableMoves:[Move]
+    var name:String
+	var experienceCurve:ExperienceCurve
+	let nature:Nature
+	
 	var level:Int {
 		didSet {
 			if level > 100 {
@@ -28,20 +35,12 @@ class Monster : Hashable {
 			}
 		}
 	}
-
-    var health:Int
-	var experience:Int
-    var moves:[Move]
-	var learnableMoves:[Move]
-    var name:String
-	var experienceCurve:ExperienceCurve
-	let nature:Nature
 	
 	private let baseStats:Stats
 	private let individualValues:Stats
 	private var experienceValues:Stats
 	
-    class func monsterWithId(_ id:Int) -> Monster {
+    static func monsterWithId(_ id:Int) -> Monster {
         //query for monster
         return Monster()
     }
@@ -66,7 +65,35 @@ class Monster : Hashable {
 	
 	// MARK: Stats
 	
+	var healthPoints:Int {
+		get {
+			return valueForStat(.healthPoints)
+		}
+	}
 	
+	var attack:Int {
+		get {
+			return valueForStat(.attack)
+		}
+	}
+	
+	var defense:Int {
+		get {
+			return valueForStat(.defense)
+		}
+	}
+	
+	var specialAttack:Int {
+		get {
+			return valueForStat(.specialAttack)
+		}
+	}
+	
+	var specialDefense:Int {
+		get {
+			return valueForStat(.specialDefense)
+		}
+	}
 	
 	var speed:Int {
 		get {
@@ -78,6 +105,13 @@ class Monster : Hashable {
 		let numerator:Float = Float((2 * baseStats[stat]) + individualValues[stat]) + (Float(experienceValues[stat])/4.0) * Float(level)
 		let frac:Float = numerator / 100.0
 		let flr:Float = floor(frac) + 5.0
+		
+		// hp is calculated a little differently, no nature
+		// too much duplication from other calculations for another function
+		if stat == .healthPoints {
+			return Int(flr) + level + 5
+		}
+		
 		let withNature = flr * Float(nature.multiplierFor(.speed))
 		
 		return Int(floor(withNature))

@@ -118,7 +118,6 @@ class Battle {
 	
 	func executeNextAction() {
 		if let next = actionQueue.pop() {
-			
 			switch next.actionType {
 			case .move:
 				executeMoveAction()
