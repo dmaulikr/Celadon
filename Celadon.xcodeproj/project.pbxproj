@@ -29,6 +29,13 @@
 		388D72DB1D57FF1100D8DE77 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72D91D57FF1100D8DE77 /* Move.swift */; };
 		388D72DF1D58056B00D8DE77 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72DE1D58056B00D8DE77 /* Battle.swift */; };
 		388D72E01D58056B00D8DE77 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D72DE1D58056B00D8DE77 /* Battle.swift */; };
+		38CF9BA81DEFEDB4006FE982 /* ExperienceCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38117F211DE5456500DB4CFE /* ExperienceCurve.swift */; };
+		38CF9BA91DEFEDBB006FE982 /* Natures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA4144C1DEF35A1009EA043 /* Natures.swift */; };
+		38CF9BAA1DEFEDC6006FE982 /* ActionQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38117F261DE7CC3400DB4CFE /* ActionQueue.swift */; };
+		38CF9BAB1DEFEDE0006FE982 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA4144E1DEF367A009EA043 /* Stats.swift */; };
+		38CF9BAC1DEFEE39006FE982 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38117F291DE7CF4000DB4CFE /* Action.swift */; };
+		38CF9BAD1DEFEE48006FE982 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865991D1DE5324200678E34 /* Item.swift */; };
+		38CF9BAE1DEFEE60006FE982 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38117F231DE7529C00DB4CFE /* Medicine.swift */; };
 		969CC290A5940C9DF963B2CB /* Pods_Celadon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3320DFED4055F5120B09DA5C /* Pods_Celadon.framework */; };
 		C9DEE92D0160C9C1FF111B29 /* Pods_CeladonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC229C074521C6F3C6EA1071 /* Pods_CeladonTests.framework */; };
 /* End PBXBuildFile section */
@@ -535,9 +542,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CF9BAD1DEFEE48006FE982 /* Item.swift in Sources */,
+				38CF9BA91DEFEDBB006FE982 /* Natures.swift in Sources */,
+				38CF9BAC1DEFEE39006FE982 /* Action.swift in Sources */,
 				388D72D81D57FE4C00D8DE77 /* Monster.swift in Sources */,
+				38CF9BAE1DEFEE60006FE982 /* Medicine.swift in Sources */,
 				388D72DB1D57FF1100D8DE77 /* Move.swift in Sources */,
+				38CF9BA81DEFEDB4006FE982 /* ExperienceCurve.swift in Sources */,
 				388D72BE1D57F3AE00D8DE77 /* CeladonTests.swift in Sources */,
+				38CF9BAB1DEFEDE0006FE982 /* Stats.swift in Sources */,
+				38CF9BAA1DEFEDC6006FE982 /* ActionQueue.swift in Sources */,
 				388D72E01D58056B00D8DE77 /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

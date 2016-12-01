@@ -63,6 +63,13 @@ class CeladonTests: XCTestCase {
 		m.level = 0
 		XCTAssert(m.level == 1, "Level set under 1")
 	}
+	
+	func testAwardingExperienceWithLevelUp() {
+		let m = Monster()
+		let lv = m.level
+		m.awardExperience(m.experienceRequiredToLevel)
+		XCTAssert(lv+1 == m.level, "Did not level up correctly on experience award")
+	}
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

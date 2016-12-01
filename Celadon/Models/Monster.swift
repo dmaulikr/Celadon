@@ -8,8 +8,6 @@
 
 import Foundation
 
-typealias ExperienceValue = (Stat, Int)
-
 class Monster : Hashable {
 	
 	/// The hash value.
@@ -134,19 +132,17 @@ class Monster : Hashable {
 		return (self.experience + points) > self.experienceRequiredToLevel
 	}
 	
-	func awardExperience(_ points:Int, _ experienceValue:ExperienceValue) {
+	func awardExperience(_ points:Int) {
 		self.experience += points
 		
 		if self.experience > self.experienceRequiredToLevel {
 			self.level += 1
 			// Consider a delegate method here
 		}
-		
-		self.awardExperienceValue(experienceValue)
 	}
 	
-	func awardExperienceValue(_ ev:ExperienceValue) {
-		
+	func awardExperienceValue(_ value:Int, _ stat:Stat) {
+		experienceValues[stat] += value
 	}
 	
 	// MARK: Hashable
