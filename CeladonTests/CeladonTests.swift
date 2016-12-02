@@ -56,13 +56,13 @@ class CeladonTests: XCTestCase {
 		XCTAssert(experienceCurve.experienceRequired(90, 100) == 517340)
 	}
 	
-	func testSettingMonsterLevelWrong() {
-		let m = Monster()
-		m.level = 101
-		XCTAssert(m.level == 100, "Level set over 100")
-		m.level = 0
-		XCTAssert(m.level == 1, "Level set under 1")
-	}
+//	func testSettingMonsterLevelWrong() {
+//		let m = Monster()
+//		m.level = 101
+//		XCTAssert(m.level == 100, "Level set over 100")
+//		m.level = 0
+//		XCTAssert(m.level == 1, "Level set under 1")
+//	}
 	
 	func testAwardingExperienceWithLevelUp() {
 		let m = Monster()
@@ -70,7 +70,18 @@ class CeladonTests: XCTestCase {
 		m.awardExperience(m.experienceRequiredToLevel)
 		XCTAssert(lv+1 == m.level, "Did not level up correctly on experience award")
 	}
-    
+	
+	func testExperienceCurveLevelSolve() {
+		let ec = ExperienceCurve.slow
+		XCTAssert(ec.level(1250000) == 100)
+		XCTAssert(ec.level(800000) == 86)
+		XCTAssert(ec.level(1) == 1)
+		XCTAssert(ec.level(10) == 2)
+		XCTAssert(ec.level(100) == 4)
+		XCTAssert(ec.level(156250) == 50)
+		XCTAssert(ec.level(156249) == 49)
+	}
+	
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

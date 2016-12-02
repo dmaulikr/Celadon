@@ -19,6 +19,27 @@ enum ExperienceCurve {
 	case fast
 	case erratic
 	
+	func level(_ experience:Int) -> Int {
+		var high:Int = 100
+		var low:Int = 1
+		var mid:Int = 50
+		
+		while high - low > 1 {
+			if experienceRequired(low) <= experience && experience < experienceRequired(mid) {
+				high = mid
+				mid = (high - low) / 2
+			} else {
+				low = mid
+				mid = ((high - low) / 2) + low
+			}
+		}
+		if experience < experienceRequired(high) {
+			return low
+		} else {
+			return high
+		}
+	}
+	
 	func experienceRequired(_ from:Int, _ to:Int) -> Int {
 		return self.experienceRequired(to) - self.experienceRequired(from)
 	}
