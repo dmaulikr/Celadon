@@ -56,14 +56,6 @@ class CeladonTests: XCTestCase {
 		XCTAssert(experienceCurve.experienceRequired(90, 100) == 517340)
 	}
 	
-//	func testSettingMonsterLevelWrong() {
-//		let m = Monster()
-//		m.level = 101
-//		XCTAssert(m.level == 100, "Level set over 100")
-//		m.level = 0
-//		XCTAssert(m.level == 1, "Level set under 1")
-//	}
-	
 	func testAwardingExperienceWithLevelUp() {
 		let m = Monster()
 		let lv = m.level

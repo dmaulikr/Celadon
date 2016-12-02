@@ -24,16 +24,6 @@ class Monster : Hashable {
 	var experienceCurve:ExperienceCurve
 	let nature:Nature
 	
-//	var level:Int {
-//		didSet {
-//			if level > 100 {
-//				level = 100
-//			} else if level < 1 {
-//				level = 1
-//			}
-//		}
-//	}
-	
 	private let baseStats:Stats
 	private let individualValues:Stats
 	private var experienceValues:Stats
@@ -143,15 +133,8 @@ class Monster : Hashable {
 	// MARK: Level
 	
 	var level:Int {
-		return 0
+		return experienceCurve.level(experience)
 	}
-	
-//	func levelUp() {
-//		if self.experience > self.experienceRequiredToLevel {
-//			self.level += 1
-//			// Consider a delegate method here
-//		}
-//	}
 	
 	// MARK: Hashable
 	
