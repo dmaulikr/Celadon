@@ -43,26 +43,32 @@ extension Array : Queue { // Non priority queue interface for arrays
 	}
 }
 
-struct MoveQueue : Queue {
+struct ActionQueue : Queue {
 	private var contents:[Action] = []
 	
 	mutating func push(_ action:Action) {
-		var didInsert = false
-		for i in 0..<contents.count {
-			let comp = contents[i]
-			if let cp = comp.calculatedMovePriority,
-			   let ap = action.calculatedMovePriority {
-				if cp < ap {
-					didInsert = true
-					contents.insert(action, at: i)
-				}
-			} else {
-				// error: bahavior undefined
-				print("You can't just insert a non-move into a move queue and not expect me to be pissed.")
-			}
+		if contents.count == 0 {
+			contents.push(action)
+			return
 		}
-		if !didInsert {
-			contents.append(action)
+		
+		// binary search for insertion point for logn insertion
+		var high = contents.count
+		var low = 0
+		var mid = (high - low) / 2 + low
+		while mid > low {
+			if action >= contents[mid] {
+				high = mid
+			} else {
+				low = mid
+			}
+			mid = (high - low) / 2 + low
+		}
+		
+		if action < contents[mid] {
+			contents.insert(action, at: high)
+		} else {
+			contents.insert(action, at: mid)
 		}
 	}
 	
@@ -72,39 +78,5 @@ struct MoveQueue : Queue {
 	
 	var count:Int {
 		return contents.count
-	}
-}
-
-struct ActionQueue : Queue {
-	private var contents:[Queue]
-	
-	init() {
-		self.contents = []
-		for i in 0...ActionType.max().rawValue {
-			if i == ActionType.move.rawValue {
-				contents.append(MoveQueue())
-			} else {
-				contents.append([Action]())
-			}
-		}
-	}
-	
-	mutating func push(_ action:Action) {
-		contents[action.actionType.rawValue].push(action)
-	}
-	
-	mutating func pop() -> Action? {
-		for var subqueue in contents {
-			return subqueue.pop()
-		}
-		return nil
-	}
-	
-	var count:Int {
-		var count = 0
-		for subqueue in contents {
-			count += subqueue.count
-		}
-		return count
 	}
 }

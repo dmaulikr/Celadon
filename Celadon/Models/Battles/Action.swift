@@ -1,6 +1,6 @@
 //
 //  Action.swift
-//  tbbs
+//  Celadon
 //
 //  Created by Jim Boulter on 11/24/16.
 //  Copyright © 2016 Jim Boulter. All rights reserved.
@@ -9,16 +9,18 @@
 import Foundation
 
 enum ActionType : Int {
-	case move = 0 // lowest priority
-	case item = 1
-	case rotate = 2 // highest priority
+	case move = 4
+	case item = 3
+	case shift = 2
+	case escape = 1
+	case megaEvolve = 0
 	
 	static func max() -> ActionType {
-		return .rotate
+		return .move
 	}
 }
 
-struct Action {
+struct Action : Comparable {
 	// all
 	var actionType:ActionType
 	var user:Monster
@@ -29,8 +31,26 @@ struct Action {
 	// item
 	var item:Item? = nil
 	
-	// rotate
+	// switch and move
 	var target:Monster? = nil
+	
+	static func <(_ lhs:Action, _ rhs:Action) -> Bool {
+		if lhs.priority == rhs.priority {
+			return lhs.user.speed < rhs.user.speed
+		}
+		return lhs.priority < rhs.priority
+	}
+	
+	static func >(_ lhs:Action, _ rhs:Action) -> Bool {
+		if lhs.priority == rhs.priority {
+			return lhs.user.speed > rhs.user.speed
+		}
+		return lhs.priority > rhs.priority
+	}
+	
+	static func ==(_ lhs:Action, _ rhs:Action) -> Bool {
+		return lhs.priority == rhs.priority && lhs.user.speed == rhs.user.speed
+	}
 	
 	init(_ move:Move, _ usedBy:Monster) {
 		actionType = .move
@@ -47,21 +67,19 @@ struct Action {
 	}
 	
 	init(_ rotatingMonster:Monster, _ forMonster:Monster) {
-		actionType = .rotate
+		actionType = .shift
 		
 		user = rotatingMonster
 		target = forMonster
 	}
 	
-	var calculatedMovePriority:Float? {
-		if move != nil {
-			// TODO: Properly calculate this value
-			var speed = user.speed
-			if let tgt = target {
-				speed -= tgt.speed
-			}
-			return move!.priority + Float(speed)
+	var priority:Int {
+		if let mv = move {
+			return mv.priority
+		} else if actionType == .megaEvolve {
+			return 7
+		} else { // everything else
+			return 8
 		}
-		return nil
 	}
 }

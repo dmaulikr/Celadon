@@ -120,26 +120,38 @@ class Battle {
 		if let next = actionQueue.pop() {
 			switch next.actionType {
 			case .move:
-				executeMoveAction()
+				executeMoveAction(next)
 			case .item:
-				executeItemAction()
-			case .rotate:
-				executeRotateAction()
+				executeItemAction(next)
+			case .shift:
+				executeShiftAction(next)
+			case .escape:
+				executeEscapeAction(next)
+			case .megaEvolve:
+				executeMegaEvolutionAction(next)
 			}
 			
 			turnCount += 1
 		}
 	}
 	
-	func executeMoveAction() {
+	func executeMoveAction(_ action:Action) {
 		
 	}
 	
-	func executeItemAction() {
+	func executeItemAction(_ action:Action) {
 		
 	}
 	
-	func executeRotateAction() {
+	func executeShiftAction(_ action:Action) {
+		
+	}
+	
+	func executeEscapeAction(_ action:Action) {
+		
+	}
+	
+	func executeMegaEvolutionAction(_ action:Action) {
 		
 	}
 }

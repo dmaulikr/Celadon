@@ -74,6 +74,17 @@ class CeladonTests: XCTestCase {
 		XCTAssert(ec.level(156249) == 49)
 	}
 	
+	func testActionQueueTypePriority() {
+		var q = ActionQueue()
+		q.push(Action(Medicine(), Monster()))
+		q.push(Action(Monster(), Monster()))
+		q.push(Action(Move(), Monster()))
+		
+		XCTAssert(q.pop()?.actionType == .shift)
+		XCTAssert(q.pop()?.actionType == .item)
+		XCTAssert(q.pop()?.actionType == .move)
+	}
+	
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
