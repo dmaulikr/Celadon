@@ -23,6 +23,7 @@ class Monster : Hashable {
     var name:String
 	var experienceCurve:ExperienceCurve
 	let nature:Nature
+	var types:[Type]
 	
 	private let baseStats:Stats
 	private let individualValues:Stats
@@ -48,6 +49,7 @@ class Monster : Hashable {
 		individualValues = [1, 1, 1, 1, 1, 1]
 		experienceValues = [1, 1, 1, 1, 1, 1]
 		nature = .hardy
+		types = [.normal]
     }
 	
 	// MARK: Stats

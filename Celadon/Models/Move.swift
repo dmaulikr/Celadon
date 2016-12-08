@@ -83,7 +83,13 @@ class Move {
 		priority = 1
     }
     
-	func effectiveness(against:Move) {
-		
+	func effectiveness(against:Monster) -> Float {
+		var mul:Float = 1.0
+		for type in against.types {
+			if let tmul = Move.effectivenessMap[self.type]?[type] {
+				mul *= tmul
+			}
+		}
+		return mul
 	}
 }

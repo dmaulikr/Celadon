@@ -20,7 +20,7 @@ class CeladonTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+	
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -83,6 +83,25 @@ class CeladonTests: XCTestCase {
 		XCTAssert(q.pop()?.actionType == .shift)
 		XCTAssert(q.pop()?.actionType == .item)
 		XCTAssert(q.pop()?.actionType == .move)
+	}
+	
+	func testMoveEffectiveness() {
+		let mv = Move()
+		mv.type = .fire
+		let mon = Monster()
+		mon.types = [.normal]
+		XCTAssert(mv.effectiveness(against: mon) == 1.0)
+		mon.types = [.water]
+		XCTAssert(mv.effectiveness(against: mon) == 1.0/2.0)
+		mon.types = [.water, .ground]
+		XCTAssert(mv.effectiveness(against: mon) == 1.0/2.0)
+		mon.types = [.water, .rock]
+		XCTAssert(mv.effectiveness(against: mon) == 1.0/4.0)
+		
+		mv.type = .fighting
+		mon.types = [.normal, .ghost]
+		XCTAssert(mv.effectiveness(against: mon) == 0.0)
+		
 	}
 	
     func testPerformanceExample() {
