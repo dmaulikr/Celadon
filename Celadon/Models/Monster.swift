@@ -16,14 +16,30 @@ class Monster : Hashable {
 	/// your program. Do not save hash values to use during a future execution.
 	public var hashValue: Int
 	var id:Int
-    var health:Int
-	var experience:Int
+	var currentHealth:Int {
+		didSet {
+			if currentHealth <= 0 {
+				faint()
+			} else if currentHealth > healthPoints {
+				currentHealth = healthPoints
+			}
+		}
+	}
+	var experience:Int {
+		didSet {
+			if experience == Int.max {
+				experience = Int.max - 1
+			}
+		}
+	}
     var moves:[Move]
-	var learnableMoves:[Move]
+	var learnableMoves:Set<Move>
     var name:String
 	var experienceCurve:ExperienceCurve
 	let nature:Nature
-	var types:[Type]
+	var types:Set<Type>
+	var statusCondition:StatusCondition
+	var specialCondition:SpecialCondition
 	
 	private let baseStats:Stats
 	private let individualValues:Stats
@@ -39,7 +55,6 @@ class Monster : Hashable {
 		hashValue = UUID().hashValue
 		
         id = 0
-        health = 100
         experience = 69
         moves = []
 		learnableMoves = []
@@ -50,7 +65,59 @@ class Monster : Hashable {
 		experienceValues = [1, 1, 1, 1, 1, 1]
 		nature = .hardy
 		types = [.normal]
+		statusCondition = .none
+		specialCondition = .none
+		currentHealth = Int.max
     }
+	
+	// MARK: Status change
+	
+	func faint() {
+		currentHealth = 0
+		statusCondition = .none
+		specialCondition = .none
+	}
+	
+	func canBeInflictedWith(statusCondition:StatusCondition) -> Bool {
+		if self.statusCondition != .none {
+			return false
+		}
+		
+		//TODO: Check for abilities
+		
+		switch statusCondition {
+		case .paralysis:
+			return !self.types.contains(.electric)
+		case .poison:
+			return !self.types.contains(.poison)
+		case .burn:
+			return !self.types.contains(.fire)
+		default:
+			return true
+		}
+	}
+	
+	func canBeInflictedWith(specialCondition:SpecialCondition) -> Bool {
+		if self.specialCondition != .none {
+			return false
+		}
+		
+		//TODO: Check for abilities
+		
+		return true
+	}
+	
+	func inflict(statusCondition:StatusCondition) {
+		if canBeInflictedWith(statusCondition: statusCondition) {
+			self.statusCondition = statusCondition
+		}
+	}
+	
+	func inflict(specialCondition:SpecialCondition) {
+		if canBeInflictedWith(specialCondition: specialCondition) {
+			self.specialCondition = specialCondition
+		}
+	}
 	
 	// MARK: Stats
 	

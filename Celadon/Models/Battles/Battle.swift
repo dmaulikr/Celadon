@@ -23,6 +23,7 @@ struct WeatherType : OptionSet {
     static let sandstorm	= WeatherType(rawValue: 1 << 2)
     static let pollen		= WeatherType(rawValue: 1 << 3)
     static let miasma		= WeatherType(rawValue: 1 << 4)
+	static let snow			= WeatherType(rawValue: 1 << 5)
 }
 
 protocol BattleDelegate {

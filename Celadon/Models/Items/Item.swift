@@ -18,10 +18,13 @@ enum StatusCondition {
 	case paralysis
 	case sleep
 	case poison
+	case burn
+	case none
 }
 
-enum SpecialConditions {
+enum SpecialCondition {
 	case confusion
+	case none
 }
 
 protocol Heals {

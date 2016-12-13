@@ -42,7 +42,7 @@ enum DamageType {
 	case status
 }
 
-class Move {
+class Move : Hashable {
 	
 	// Map of effectiveness for move type to defender type, multipliers can be combined for multi-type monsters
 	static private let effectivenessMap:[Type:[Type:Float]] =
@@ -65,6 +65,11 @@ class Move {
 		 	.psychic	: [.fighting:2.0, .poison:2.0, .psychic:0.5, .dark:0.0, .steel:0.5],
 		 	.poison		: [.grass:2.0, .poison:0.5, .ground:0.5, .rock:0.5, .ghost:0.5, .steel:0.0, .fairy:2.0]
 	]
+	
+	var hashValue: Int {
+		return id.hashValue
+		// could use name instead
+	}
 	
     var id:Int
     var name:String
@@ -101,5 +106,24 @@ class Move {
 			}
 		}
 		return mul
+	}
+	
+	func sameTypeAttackBonus(_ user:Monster) -> Float {
+		if user.types.contains(self.type) {
+			return 1.5
+		}
+		return 1.0
+	}
+	
+	func hit(_ user:Monster, _ target:Monster) {
+		if damageType == .physical {
+			target.currentHealth -= (user.attack - target.defense) + Int((Float(damage) * sameTypeAttackBonus(user)))
+		}
+	}
+	
+	// MARK: Equatable
+	
+	static func ==(_ lhs:Move, _ rhs:Move) -> Bool {
+		return lhs.id == rhs.id
 	}
 }
